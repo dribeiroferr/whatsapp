@@ -1,12 +1,13 @@
 {
   "name": "whatsapp",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "/dist/server.js",
   "repository": "https://github.com/dribeiroferr/whatsapp.git",
   "author": "Davi Ferreira <academic.dave.ito@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "build": "tsc -target es5 --experimentalDecorators --emitDecoratorMetadata"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
