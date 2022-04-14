@@ -47,6 +47,10 @@ Hoje o QRCode pelo backend até o frontend não será possível, estou estudando
 
 Como trata-se de uma API que será uma alternativa à oficial, muitos recursos ficaram limitados, muitos das suas funcionalidades podem sofrer algum tipo de deterioração sem aviso prévio, através de alguma diretriz, atualização, ou política da Meta.
 
+---
+
+## Iniciando:
+
 Passos para instalação: 
 
 verifique se o nodejs está instalado na sua máquina, caso não, instale via [NodeJS](https://nodejs.org/en/).
