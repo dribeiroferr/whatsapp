@@ -9,7 +9,8 @@
     "dev": "nodemon",
     "build": "tsc -target es5 --experimentalDecorators --emitDecoratorMetadata",
     "start": "node ./dist/server.js",
-    "deploy": "docker-compose build && docker-compose up"
+    "deploy:docker": "docker-compose build && docker-compose up",
+    "deploy:local": "yarn build && yarn start"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
