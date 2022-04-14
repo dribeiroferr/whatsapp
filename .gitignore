@@ -5,3 +5,7 @@ tokens
 dist
 
 !dist/.keep
+
+docker-compose.yml
+
+Dockerfile

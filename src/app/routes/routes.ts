@@ -16,14 +16,34 @@ router.use(cors(options));
 //enable pre-flight:
 router.options('*', cors(options));
 
-router.post("/send", async(req: Request, res: Response) => {
-    
-    const { to, body } = req.body;
-    const toTreated = to + "@c.us"
 
-    await sender.sendText(toTreated, body);
-    return res.json({
-        message: "Mensagem enviaada com sucesso ao destinatário",
-        code: 200
-    });
-})
+// Rota post: 
+
+/**
+ * 
+ * Aqui a rota precisará dos parâmetros: 
+ * {
+ *  "to": "string", <= Telefone para quem ele enviará a mensagem
+ *  "body": "string" <= Corpo de mensagem de texto 
+ * }
+ * 
+ */
+
+router.post("/api/send", async(req: Request, res: Response) => {
+    try {
+        const { to, body } = req.body;
+        const toTreated = to + "@c.us"
+
+        await sender.sendText(toTreated, body);
+        return res.json({
+            message: "Mensagem enviada com sucesso ao destinatário",
+            code: 200
+        });    
+    } catch (error) {
+        console.error(error);
+        return res.json({
+            message: "Algo deu errado, favor verificar logs e tentar mais tarde."
+        });
+    }
+    
+});

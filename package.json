@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon",
-    "build": "tsc -target es5 --experimentalDecorators --emitDecoratorMetadata"
+    "build": "tsc -target es5 --experimentalDecorators --emitDecoratorMetadata",
+    "start": "node ./dist/server.js",
+    "deploy": "docker-compose build && docker-compose up"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",

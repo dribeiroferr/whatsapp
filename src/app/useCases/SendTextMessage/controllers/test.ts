@@ -1,3 +1,5 @@
+// Classe em estudo para enviar o QR Code
+
 import {
     Whatsapp,
     create, 
@@ -10,11 +12,18 @@ export class SenderTest {
 
     constructor() {};
 
+    
+    async sendText(to: string, body: string){
+
+        await this.client.sendText(to, body)
+    }
+
     private initialize(){
 
         const status = (statusSession: string) => {
 
         }
+
 
         const start = (client:Whatsapp) => {}
 

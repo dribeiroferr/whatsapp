@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  whatsapp_bot:
+    build: .
+    restart: always
+    image: node:17-alpine3.14
+    container_name: whatsapp_bot
+    ports:
+      - "9001:9001"
+    volumes:
+      - .:/app
