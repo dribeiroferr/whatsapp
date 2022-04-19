@@ -1,15 +1,15 @@
 #!/bin/bash
 
 
-# Update apt-get: 
+echo "Update apt-get: " 
 
 sudo apt-get update
 
-# Installing dependencies: 
+echo "Installing dependencies: " 
 
 sudo apt-get install -y libappindicator1 fonts-liberation
 
-# Force install all the dependencies below: 
+echo "Force install all the dependencies below: " 
 
 sudo apt-get install -f
 The following additional packages will be installed:
@@ -51,18 +51,23 @@ The following NEW packages will be installed:
   libxkbcommon0 libxml-parser-perl libxml-twig-perl libxml-xpathengine-perl libxmu6 libxpm4 libxshmfence1 libxss1 libxt6
   libxtst6 libxv1 libxxf86dga1 libxxf86vm1 perl-openssl-defaults x11-common x11-utils x11-xserver-utils xdg-utils
   
-# Download Chrome: 
+echo  "Download Chrome:" 
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-# Install Chrome: 
+echo "Installing chrome" 
 
 sudo dpkg -i google-chrome*.deb
-
-clear 
 
 # If it is okay, show version: 
 echo "Google Chrome has been installed with success ! [SUCCESS - EXIT 0]"
 
 # Google Chrom Version: 
 google-chrome-stable -version
+
+echo "installing application dependencies: "
+
+yarn install 
+
+echo "Running application: "
+yarn deploy:local
