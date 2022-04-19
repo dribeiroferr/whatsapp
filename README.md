@@ -68,6 +68,15 @@ yarn install
 
 ```
 
+Execute o shell "chromium-setup.sh", pois vamos precisar instalá-lo para que seja possível executar da maneira esperada dentro do servidor. Obs: criei este procedimento após validar no servidor da GCP.
+
+```
+
+sudo ./chromium-setup.sh
+
+
+```
+
 
 e realize o comando abaixo: 
 
