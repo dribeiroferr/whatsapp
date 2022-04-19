@@ -29,7 +29,7 @@ router.options('*', cors(options));
  * 
  */
 
-router.get("/", async (req: Request, res: response) => {
+router.get("/", async (req: Request, res: Response) => {
     try {
         return res.json({
             message: "error",
