@@ -7,10 +7,12 @@ import {
     SocketState
 } from "venom-bot";
 
-export class SenderTest { 
+export class Authenticate { 
     private client: Whatsapp;
 
-    constructor() {};
+    constructor() {
+        this.initialize();
+    };
 
     
     async sendText(to: string, body: string){
@@ -19,13 +21,6 @@ export class SenderTest {
     }
 
     private initialize(){
-
-        const status = (statusSession: string) => {
-
-        }
-
-
-        const start = (client:Whatsapp) => {}
 
         create("ws-restaurante-atendimento-test", (base64Qr: string, asciiQR: string
         ) => {
@@ -48,5 +43,5 @@ export class SenderTest {
                 if (err != null) {
                     console.log(err);
                 }
-                }) 
+                });
     })}}
