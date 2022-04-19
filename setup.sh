@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "installing sudo"
+apt-get install sudo
+
 
 echo "Update apt-get: " 
 

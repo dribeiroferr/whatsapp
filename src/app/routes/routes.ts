@@ -29,6 +29,21 @@ router.options('*', cors(options));
  * 
  */
 
+router.get("/", async (req: Request, res: response) => {
+    try {
+        return res.json({
+            message: "error",
+            code: 200
+        });
+    } catch (error) {
+        console.error(error);
+        return res.json({
+            message: "error",
+            code: 200
+        });
+    };
+});
+
 router.post("/api/send", async(req: Request, res: Response) => {
     try {
         const { to, body } = req.body;
@@ -44,6 +59,6 @@ router.post("/api/send", async(req: Request, res: Response) => {
         return res.json({
             message: "Algo deu errado, favor verificar logs e tentar mais tarde."
         });
-    }
+    };
     
 });
